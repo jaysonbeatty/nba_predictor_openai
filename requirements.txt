@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+nba_api
+requests
+matplotlib
+seaborn
+jupyter
+fastapi
+uvicorn

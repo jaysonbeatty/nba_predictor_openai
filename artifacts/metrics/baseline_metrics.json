@@ -1,0 +1,27 @@
+{
+  "feature_columns": [
+    "rest_advantage",
+    "home_off_rating_roll10",
+    "away_off_rating_roll10",
+    "off_rating_diff",
+    "home_def_rating_roll10",
+    "away_def_rating_roll10",
+    "def_rating_diff"
+  ],
+  "train_rows": 2407,
+  "test_rows": 975,
+  "train_date_min": "2023-10-30",
+  "train_date_max": "2025-04-13",
+  "test_date_min": "2025-10-21",
+  "test_date_max": "2026-03-11",
+  "win_model": {
+    "log_loss": 0.6309693512651997,
+    "accuracy": 0.638974358974359
+  },
+  "margin_model": {
+    "mae": 11.574201530601716
+  },
+  "total_model": {
+    "mae": 15.381961520686959
+  }
+}

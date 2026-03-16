@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA Prediction Chat</title>
+    <link rel="stylesheet" href="/static/styles.css?v=3" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">NBA Prediction Portfolio</p>
+        <h1>NBA Prediction Chat</h1>
+        <p class="hero-copy">
+          Ask natural what-if questions about a selected NBA game. The chat uses a scenario-aware
+          prediction engine underneath, then explains the change like an analyst.
+        </p>
+      </section>
+
+      <section class="workspace">
+        <section class="panel chat-panel">
+          <div class="chat-header">
+            <div>
+              <p class="section-label">Chat</p>
+              <h2>Ask about tonight's NBA games</h2>
+            </div>
+            <div class="starter-pills">
+              <button class="pill" data-prompt="What is the outlook for Atlanta tonight?">Atlanta outlook</button>
+              <button class="pill" data-prompt="What happens if Jalen Brunson is out tonight?">Brunson out</button>
+              <button class="pill" data-prompt="Compare baseline, Brunson out, and Karl-Anthony Towns out for New York tonight.">Compare Knicks scenarios</button>
+            </div>
+          </div>
+
+          <div id="chatThread" class="chat-thread"></div>
+
+          <form id="chatForm" class="chat-form">
+            <label class="field chat-input-wrap">
+              <span class="sr-only">Ask a question</span>
+              <textarea
+                id="chatInput"
+                rows="3"
+                placeholder="Example: What is the outlook for Atlanta tonight?"
+              ></textarea>
+            </label>
+            <div class="chat-actions">
+              <p class="chat-hint">Tip: ask about a team by city or nickname, then add injury what-ifs naturally.</p>
+              <button id="sendBtn" class="button primary" type="submit">Send</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel controls">
+            <div class="controls-header compact">
+              <div>
+                <p class="section-label">Tonight's Slate</p>
+                <h2 id="gamesTitle">Loading games</h2>
+              </div>
+            </div>
+            <div id="gamesList" class="games-list"></div>
+          </section>
+
+          <section id="statusBanner" class="status hidden"></section>
+
+          <section id="resultsSection" class="results hidden">
+            <div class="panel result-panel">
+              <p class="section-label">Current Snapshot</p>
+              <h2 id="baselineTitle">Baseline Prediction</h2>
+              <div id="baselineCards" class="card-grid"></div>
+            </div>
+
+            <div id="scenarioResults" class="scenario-results"></div>
+          </section>
+
+          <section class="panel how-it-works">
+            <p class="section-label">Why This Is Interesting</p>
+            <h2>What the demo shows</h2>
+            <ul>
+              <li>Natural-language scenario entry on top of a structured prediction API</li>
+              <li>Historical team and player features with scheduled-game support</li>
+              <li>Player-name resolution and transparent override assumptions</li>
+              <li>Baseline vs scenario comparisons for the selected matchup</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/static/app.js?v=3" type="module"></script>
+  </body>
+</html>
