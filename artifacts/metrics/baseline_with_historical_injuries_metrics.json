@@ -14,19 +14,19 @@
     "away_players_flagged"
   ],
   "train_rows": 2407,
-  "test_rows": 1099,
+  "test_rows": 1122,
   "train_date_min": "2023-10-30",
   "train_date_max": "2025-04-13",
   "test_date_min": "2025-10-21",
-  "test_date_max": "2026-03-27",
+  "test_date_max": "2026-03-30",
   "win_model": {
-    "log_loss": 0.6082778451993357,
-    "accuracy": 0.6496815286624203
+    "log_loss": 0.6058538292288246,
+    "accuracy": 0.6515151515151515
   },
   "margin_model": {
-    "mae": 11.279699537627971
+    "mae": 11.327080071197718
   },
   "total_model": {
-    "mae": 15.614935836929693
+    "mae": 15.555164762264042
   }
 }
